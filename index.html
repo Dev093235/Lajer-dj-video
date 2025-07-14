@@ -4,93 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lazer DJ Meham</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    /* नए सोशल मीडिया बटन के लिए स्टाइल */
-    .social-links {
-      margin-top: 30px; /* ऊपर से थोड़ी जगह */
-      display: flex;
-      flex-direction: column; /* बटन एक के नीचे एक */
-      gap: 15px; /* बटनों के बीच की दूरी */
-      align-items: center; /* सेंटर में अलाइन करें */
-      width: 100%;
-      max-width: 300px; /* बटनों की अधिकतम चौड़ाई */
-    }
-
-    .social-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 25px;
-      border-radius: 30px; /* गोल कोने */
-      font-size: 1.1em;
-      font-weight: 600;
-      text-decoration: none;
-      color: white;
-      transition: all 0.3s ease;
-      width: 100%; /* पूरी चौड़ाई लें */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* हल्का शैडो */
-    }
-
-    .social-button i {
-      margin-right: 10px; /* आइकन और टेक्स्ट के बीच की दूरी */
-      font-size: 1.3em;
-    }
-
-    .social-button.youtube {
-      background: linear-gradient(45deg, #FF0000, #CC0000); /* YouTube लाल */
-      border: 2px solid #FF0000;
-    }
-
-    .social-button.instagram {
-      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Instagram ग्रेडिएंट */
-      border: 2px solid #dc2743;
-    }
-
-    .social-button:hover {
-      transform: translateY(-3px); /* होवर पर थोड़ा ऊपर उठें */
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    }
-  </style>
 </head>
-<body>
+<body onclick="enableSound()">
+  <div class="video-bg">
+    <video id="djVideo" autoplay muted loop playsinline>
+      <source src="djpromo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-  <video autoplay muted loop id="background-video">
-    <source src="background_video.mp4" type="video/mp4">
-    आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
-  </video>
-
-  <div class="overlay">
+  <div class="content">
     <h1>Lazer DJ Meham</h1>
-    <p>Feel the Beat, Rule the Night <span class="fire-emoji">🔥</span></p>
+    <p>Feel the Beat, Rule the Night 🔥</p>
 
-    <div class="social-links">
-      <a href="Https://youtube.com/@lazerdj4980?si=RjlDvZ9h3rsEkfJ0" target="_blank" class="social-button youtube">
-        <i class="fab fa-youtube"></i> YouTube Channel
-      </a>
-      <a href="https://www.instagram.com/lazerdjmeham?igsh=bGduZ2I2aXRiMnU4" target="_blank" class="social-button instagram">
-        <i class="fab fa-instagram"></i> Instagram Profile
-      </a>
+    <a class="btn red" href="#">🎥 YouTube Channel</a>
+    <a class="btn orange" href="#">📸 Instagram Profile</a>
+
+    <div class="box">
+      <h2>Ready to Light Up Your Event?</h2>
+      <p>Book Lazer DJ Meham for an unforgettable experience!</p>
+      <a class="book-btn" href="#">BOOK NOW!</a>
     </div>
 
-    <div class="booking-section">
-        <h2>Ready to Light Up Your Event?</h2>
-        <p>Book Lazer DJ Meham for an unforgettable experience!</p>
-        <a href="https://wa.me/917988034346" target="_blank" class="booking-button">Book Now!</a>
-    </div>
-
-    <div class="buttons">
-      <a class="whatsapp" href="https://wa.me/917988034346" target="_blank">💬 WhatsApp</a>
-      <a class="call" href="tel:+917988034346">📞 Call Now</a>
-    </div>
+    <a class="btn green" href="https://wa.me/919788034346">💬 WhatsApp</a>
+    <a class="btn pink" href="tel:+919788034346">📞 Call Now</a>
   </div>
 
   <script>
-    // आपका कोई भी अन्य JavaScript यहाँ आ सकता है
-    // जैसे कि, अगर आपके पास कोई और स्क्रिप्ट है जो वीडियो से संबंधित नहीं है
+    function enableSound() {
+      const vid = document.getElementById("djVideo");
+      vid.muted = false;
+    }
   </script>
-
 </body>
 </html>
