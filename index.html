@@ -4,38 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lazer DJ Meham</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-<body onclick="enableSound()">
-  <div class="video-bg">
-    <video id="djVideo" autoplay muted loop playsinline>
-      <source src="djpromo.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
+<body>
 
+  <!-- Background Video with Sound -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="djpromo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay Content -->
   <div class="content">
     <h1>Lazer DJ Meham</h1>
     <p>Feel the Beat, Rule the Night 🔥</p>
-
-    <a class="btn red" href="#">🎥 YouTube Channel</a>
-    <a class="btn orange" href="#">📸 Instagram Profile</a>
-
-    <div class="box">
-      <h2>Ready to Light Up Your Event?</h2>
-      <p>Book Lazer DJ Meham for an unforgettable experience!</p>
-      <a class="book-btn" href="#">BOOK NOW!</a>
-    </div>
-
-    <a class="btn green" href="https://wa.me/919788034346">💬 WhatsApp</a>
-    <a class="btn pink" href="tel:+919788034346">📞 Call Now</a>
+    <a class="yt" href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank">🎥 YouTube Channel</a>
+    <a class="insta" href="https://instagram.com/YOUR_PROFILE" target="_blank">📸 Instagram</a>
+    <h2>Ready to Light Up Your Event?</h2>
+    <p>Book Lazer DJ Meham for an unforgettable experience!</p>
+    <a class="book" href="#">🎉 BOOK NOW!</a>
+    <br><br>
+    <a class="wa" href="https://wa.me/7988034346" target="_blank">💬 WhatsApp</a>
+    <a class="call" href="tel:+917988034346" target="_blank">📞 Call Now</a>
   </div>
 
-  <script>
-    function enableSound() {
-      const vid = document.getElementById("djVideo");
-      vid.muted = false;
-    }
-  </script>
 </body>
 </html>
