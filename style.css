@@ -2,75 +2,76 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
   color: white;
-  text-align: center;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.video-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
   overflow: hidden;
 }
 
-.video-bg video {
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
   min-width: 100%;
   min-height: 100%;
+  z-index: -1;
   object-fit: cover;
 }
 
 .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent */
   padding: 30px;
-  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 0 30px #000;
 }
 
 h1 {
-  font-size: 40px;
-  margin: 10px 0;
-  font-weight: 800;
+  font-size: 2.5em;
+  margin-bottom: 0.2em;
+  color: gold;
 }
 
-p {
-  font-size: 18px;
+h2 {
+  color: #ffdd57;
 }
 
-.btn {
+a {
   display: inline-block;
-  margin: 10px;
+  margin: 8px;
   padding: 12px 20px;
-  border-radius: 30px;
-  color: white;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  font-size: 1em;
 }
 
-.red { background-color: #ff3d3d; }
-.orange { background-color: #ff7f00; }
-.green { background-color: #25D366; }
-.pink { background-color: #d90368; }
-
-.book-btn {
-  display: inline-block;
-  background: linear-gradient(45deg, orange, red);
-  padding: 15px 30px;
+.yt {
+  background: red;
   color: white;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 30px;
-  margin-top: 15px;
 }
 
-.box {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-  padding: 20px;
-  margin: 30px 0;
+.insta {
+  background: #E1306C;
+  color: white;
+}
+
+.book {
+  background: orange;
+  color: black;
+}
+
+.wa {
+  background: #25D366;
+  color: black;
+}
+
+.call {
+  background: #C70039;
+  color: white;
 }
